@@ -13,6 +13,7 @@ conan
 libcurl
 json
 sqlite
+quill
 
 
 config.json
