@@ -9,7 +9,11 @@ find_package(SQLiteCpp REQUIRED)
 find_package(GTest REQUIRED)
 find_package(quill REQUIRED)
 
-add_executable(smtpBot src/main.cpp)
+add_executable(
+    smtpBot
+    src/main.cpp
+    src/config/config.cpp
+)
 target_link_libraries(smtpBot dpp::dpp)
 target_link_libraries(smtpBot CURL::libcurl)
 target_link_libraries(smtpBot nlohmann_json::nlohmann_json)
