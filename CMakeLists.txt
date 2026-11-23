@@ -12,7 +12,7 @@ find_package(quill REQUIRED)
 add_executable(
     smtpBot
     src/main.cpp
-    src/config/config.cpp
+    src/BotConfig/BotConfig.cpp
 )
 target_link_libraries(smtpBot dpp::dpp)
 target_link_libraries(smtpBot CURL::libcurl)

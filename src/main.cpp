@@ -1,11 +1,11 @@
-#include "config/config.hpp"
+#include "BotConfig/BotConfig.hpp"
 #include <dpp/dpp.h>
 
-#define CONFIG_JSON_PATH "config.json"
+const std::string CONFIG_JSON_PATH = "config.json";
 
 int main() {
-  auto config = Config(CONFIG_JSON_PATH);
-  dpp::cluster bot(config.get("token"));
+  auto config = BotConfig(CONFIG_JSON_PATH);
+  dpp::cluster bot(config.get_token());
 
   // logger
   bot.on_log(dpp::utility::cout_logger());
