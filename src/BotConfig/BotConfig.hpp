@@ -12,7 +12,7 @@ private:
   int debounce_seconds;
 
 public:
-  BotConfig(std::string path);
+  BotConfig(const std::string& path);
   std::string get_token();
   std::string get_smtp_url();
   std::string get_email();
