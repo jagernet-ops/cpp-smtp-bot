@@ -1,0 +1,15 @@
+[requires]
+dpp/10.0.35
+libcurl/8.9.1
+sqlitecpp/3.4.0
+nlohmann_json/3.11.2
+gtest/1.18.0
+quill/13.1.0
+
+[generators]
+CMakeDeps
+CMakeToolchain
+
+[layout]
+cmake_layout
+
