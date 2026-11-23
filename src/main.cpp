@@ -11,7 +11,7 @@ int main() {
     bot.on_log(dpp::utility::cout_logger());
 
     // message that is viewable by the bot
-    bot.on_message_create([](const dpp::message_create_t &event) {
+    bot.on_message_create([](const dpp::message_create_t& event) {
         std::string content = event.msg.content;
         std::string author = event.msg.author.global_name;
 
