@@ -1,0 +1,8 @@
+---
+BasedOnStyle: LLVM
+IndentWidth: 4
+ColumnLimit: 100
+AlignAfterOpenBracket: true
+AccessModifierOffset: -4 # don't indent class access modifiers
+PointerAlignment: Left
+---

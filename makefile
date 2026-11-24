@@ -3,7 +3,7 @@
 run: ./build/Release/smtpBot
 	./build/Release/smtpBot
 
-./build/Release/smtpBot: build ./src/*.cpp
+./build/Release/smtpBot: build ./src/*.cpp ./src/**/*.cpp ./src/**/*.hpp
 	cmake --preset=conan-release
 	cmake --build --preset=conan-release
 
