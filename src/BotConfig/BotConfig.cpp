@@ -3,11 +3,14 @@
 #include <fstream>
 #include <iostream>
 
-BotConfig::BotConfig(const std::string& path) {
+BotConfig::BotConfig(const std::string& path)
+{
     std::ifstream f(path);
 
     if (!f.good()) {
+        // TODO-1: replace with quill log
         std::cout << std::format("Cannot find '{}'", path) << std::endl;
+        // TODO-0: throw exception, don't exit
         exit(1);
     }
 
@@ -20,9 +23,12 @@ BotConfig::BotConfig(const std::string& path) {
         channels = config["channels"];
         debounce_seconds = config["debounce_seconds"];
         f.close();
-    } catch (json::exception j) {
+    }
+    catch (json::exception j) {
+        // TODO-1: replace with quill log
         std::cout << j.what() << std::endl;
         f.close();
+        // TODO-0: throw exception, don't exit
         exit(1);
     }
 }
